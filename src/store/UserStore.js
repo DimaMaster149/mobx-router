@@ -1,7 +1,7 @@
 import { action, observable, computed } from 'mobx';
 import axios from "axios";
 
-export class UserStore {
+class UserStore {
     @observable users = [];
 
     @computed get usersList() {
@@ -14,3 +14,5 @@ export class UserStore {
       return users
     }
 }
+
+export const userStore = new UserStore();

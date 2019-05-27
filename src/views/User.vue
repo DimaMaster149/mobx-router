@@ -11,12 +11,12 @@
 
 <script>
 import { observer } from "mobx-vue";
-import { UserStore } from "../store/UserStore";
+import { userStore } from "../store/UserStore";
 export default observer({
   name: "User",
   data() {
     return {
-      store: new UserStore()
+      store: userStore
     };
   },
   mounted() {

@@ -4,14 +4,14 @@
 
 <script>
 // @ is an alias to /src
-import { UserStore } from "../store/UserStore";
+import { userStore } from "../store/UserStore";
 
 export default {
   name: "home",
 
   data() {
     return {
-      store: new UserStore()
+      store: userStore
     };
   },
   mounted() {}
