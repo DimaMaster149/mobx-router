@@ -1,19 +1,21 @@
 <template>
-  <div class="home">{{store.users}}</div>
+  <div class="home">
+    home
+    {{store.users}}
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import { observer } from "mobx-vue";
 import { userStore } from "../store/UserStore";
-
-export default {
+export default observer({
   name: "home",
 
   data() {
     return {
       store: userStore
     };
-  },
-  mounted() {}
-};
+  }
+});
 </script>

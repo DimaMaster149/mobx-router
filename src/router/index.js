@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '../views/Home.vue'
 import User from '../views/User.vue'
 import Spinner from "../components/Spinner.vue"
+import { userLoader } from "./loaders/fetch-users"
 import { EnchancedRouter } from 'vue-enchanced-router';
 Vue.use(Router)
 
@@ -15,7 +16,7 @@ export default new EnchancedRouter({
   routes: [{
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
     },
     {
       path: '/about',
@@ -28,6 +29,7 @@ export default new EnchancedRouter({
     {
       path: '/user',
       name: 'user',
-      component: User
+      component: User,
+      loaders: [userLoader]
     }]
 })

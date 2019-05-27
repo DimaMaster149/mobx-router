@@ -18,11 +18,6 @@ export default observer({
     return {
       store: userStore
     };
-  },
-  mounted() {
-    this.store.fetchUsers().then(() => {
-      console.log(this.store.users.length, this.store.users, "user");
-    });
   }
 });
 </script>
