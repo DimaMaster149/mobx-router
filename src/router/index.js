@@ -2,9 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
 import User from '../views/User.vue'
+import CuriosityPhotos from '../views/CuriosityPhotos.vue'
 import Spinner from "../components/Spinner.vue"
 import { userLoader } from "./loaders/fetch-users"
+import { curiosityPhotosLoader } from "./loaders/fetch-curiosity-photos"
 import { EnchancedRouter } from 'vue-enchanced-router';
+
 Vue.use(Router)
 
 export default new EnchancedRouter({
@@ -31,5 +34,12 @@ export default new EnchancedRouter({
       name: 'user',
       component: User,
       loaders: [userLoader]
-    }]
+    },
+    {
+      path: '/mars',
+      name: 'mars',
+      component: CuriosityPhotos,
+      loaders: [curiosityPhotosLoader]
+    },
+  ]
 })
