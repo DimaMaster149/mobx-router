@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <curiosity-photo-item class="w-1/4" v-for="photo in store.photos" :key="photo.id" :photo="photo" />
+  <div class="flex flex-wrap flex-row">
+    <div class="w-1/4 h-60" v-for="photo in store.curiosityPhotos" :key="photo.id" >
+        <curiosity-photo-item class="w-full h-full" :photo="photo"/>
+    </div>
   </div>
 </template>
 
@@ -18,6 +20,9 @@ export default observer({
     return {
       store: marsStore
     };
+  },
+  mounted(){
+    console.log(this.store.curiosityPhotos, 'mounted')
   }
 });
 </script>

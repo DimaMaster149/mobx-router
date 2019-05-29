@@ -12,7 +12,6 @@ class MarsStore {
       runInAction(() => {
         let photos = response.data.photos;
         this.curiosityPhotos = photos
-        console.log(photos)
       })
     } catch (err) {
       console.log(err, "error")

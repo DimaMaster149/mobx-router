@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-full">
-    <div class="w-full h-35">
-      <!-- <img :src="photo.img_src" :alt="photo.rover.name"> -->
+    <div class="p-2">
+      <img class="w-full h-full" :src="photo.img_src" :alt="photo.rover.name">
     </div>
     <div class="flex flex-col w-full">
       <div>
@@ -11,8 +11,6 @@
         Soul: {{photo.sol}}
       </div>
     </div>
-    
-   
   </div>
 </template>
 
